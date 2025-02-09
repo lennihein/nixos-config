@@ -2,6 +2,8 @@
 {
   # NerdFonts
   fonts.packages = with pkgs; [
-    (nerdfonts.override { fonts = [ "FiraCode" "DroidSansMono" "Iosevka"]; })
+    nerd-fonts.fira-code
+    nerd-fonts.droid-sans-mono
+    nerd-fonts.iosevka
   ];
 }
