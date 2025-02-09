@@ -10,7 +10,6 @@
         # command line tools 
         htop bottom gdu neofetch ranger tldr gitui bat fzf ripgrep pwndbg rm-improved eza nvd direnv procs fd duf
     ];
-    programs.direnv.enable = true;
     programs.fish.enable = true;
     programs.vim = {
       defaultEditor = true;
