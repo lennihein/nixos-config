@@ -19,6 +19,7 @@
           ./modules/uncommon/boot.nix
           ./modules/uncommon/virtualisation.nix
           ./modules/uncommon/wireshark.nix
+          ./hosts/dell/hardware-configuration.nix
           home-manager.nixosModules.home-manager
           {
             home-manager.useGlobalPkgs = true;
