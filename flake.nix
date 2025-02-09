@@ -15,7 +15,7 @@
           ./modules/common
           ./modules/laptop/default.nix
           ./modules/desktop-environment/default.nix
-          ./modules/uncommon/wayland.nix
+          ./modules/uncommon/x11.nix
           ./modules/uncommon/boot.nix
           ./modules/uncommon/virtualisation.nix
           ./modules/uncommon/wireshark.nix
@@ -24,7 +24,7 @@
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-            home-manager.users.lenni = home-manager-config.homeConfigurations.nixos;
+            home-manager.users.lenni = home-manager-config.nixosModules.default;
           }
         ];
       };
