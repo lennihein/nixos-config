@@ -8,7 +8,7 @@
         python3
         
         # command line tools 
-        htop bottom gdu neofetch ranger tldr gitui bat fzf ripgrep pwndbg rm-improved eza nvd procs fd duf
+        htop bottom gdu neofetch ranger tldr gitui bat fzf ripgrep rm-improved eza nvd procs fd duf
     ];
     programs.fish.enable = true;
     programs.vim = {
