@@ -26,11 +26,11 @@
         "nixpkgs": "nixpkgs_2"
       },
       "locked": {
-        "lastModified": 1740501819,
-        "narHash": "sha256-fCoFFhTHlYf5Ifg6Z/lE3wmEOTugT1qCT+vF2DtJLJc=",
+        "lastModified": 1740502067,
+        "narHash": "sha256-HnjVR+2F8wX9m/jMeolfzhb03nYx3i31SCTZOwTD5Gg=",
         "owner": "lennihein",
         "repo": "home-manager",
-        "rev": "fff41cca0ddca1ba01100e3c50fda4f636609de9",
+        "rev": "523da21daea2aecd9ddcac13e39778ab518f41fb",
         "type": "github"
       },
       "original": {
