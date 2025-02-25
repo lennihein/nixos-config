@@ -7,8 +7,8 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    # home-manager-config.url = "github:lennihein/home-manager";
-    home-manager-config.url = "/home/lenni/home-manager";
+    home-manager-config.url = "github:lennihein/home-manager";
+    # home-manager-config.url = "/home/lenni/home-manager";
   };
 
  outputs = { self, nixpkgs, home-manager, home-manager-config, ... }: {
