@@ -42,6 +42,7 @@
           ./modules/uncommon/boot.nix
           ./modules/uncommon/virtualisation.nix
           ./modules/uncommon/wireshark.nix
+          ./modules/uncommon/tpm.nix
           ./modules/uncommon/adguard.nix
           ./hosts/ptah/hardware-configuration.nix
           home-manager.nixosModules.home-manager
