@@ -5,4 +5,5 @@
   boot.loader.grub.efiSupport = true;
   boot.loader.efi.canTouchEfiVariables = true;
   boot.plymouth.enable = true;
+  boot.loader.grub.configurationLimit = 5;
 }
