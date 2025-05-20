@@ -1,7 +1,7 @@
 { config, pkgs, lib, ... }:
 {
   # Disable GNOME keyring
-  services.gnome.gnome-keyring.enable = lib.mkForce false;
+  # services.gnome.gnome-keyring.enable = lib.mkForce false;
 
   # GNOME excludes
   environment.gnome.excludePackages = with pkgs; [
