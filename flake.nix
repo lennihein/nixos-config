@@ -23,6 +23,7 @@
           ./modules/uncommon/boot.nix
           ./modules/uncommon/virtualisation.nix
           ./modules/uncommon/wireshark.nix
+          ./modules/uncommon/tpm.nix
           ./hosts/dell/hardware-configuration.nix
           home-manager.nixosModules.home-manager
           {
