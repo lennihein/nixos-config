@@ -26,14 +26,17 @@
         "nixpkgs": "nixpkgs_2"
       },
       "locked": {
-        "lastModified": 1747815211,
-        "narHash": "sha256-XRRwIHNUkuBFnaBs48UqbZ/wcX20XdwEgXmWCRby+8M=",
-        "path": "/home/lenni/home-manager",
-        "type": "path"
+        "lastModified": 1747815205,
+        "narHash": "sha256-THV269S+FT/rSb7WAxkoPr4o1Wh7+tmuRxhei65DQuc=",
+        "owner": "lennihein",
+        "repo": "home-manager",
+        "rev": "0b3fffcd5273676a8b5adcb1ae05d52e8351c6d0",
+        "type": "github"
       },
       "original": {
-        "path": "/home/lenni/home-manager",
-        "type": "path"
+        "owner": "lennihein",
+        "repo": "home-manager",
+        "type": "github"
       }
     },
     "home-manager_2": {
