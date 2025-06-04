@@ -1,4 +1,4 @@
 { config, pkgs, ... }:
 {
-  services.xserver.displayManager.gdm.wayland = false;
+  services.displayManager.gdm.wayland = false;
 }
