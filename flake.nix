@@ -24,6 +24,7 @@
           ./modules/uncommon/virtualisation.nix
           ./modules/uncommon/wireshark.nix
           ./modules/uncommon/tpm.nix
+          ./modules/uncommon/latex.nix
           ./hosts/dell/hardware-configuration.nix
           home-manager.nixosModules.home-manager
           {
@@ -44,6 +45,7 @@
           ./modules/uncommon/virtualisation.nix
           ./modules/uncommon/wireshark.nix
           ./modules/uncommon/tpm.nix
+          ./modules/uncommon/latex.nix
           ./modules/uncommon/adguard.nix
           ./hosts/ptah/hardware-configuration.nix
           home-manager.nixosModules.home-manager
