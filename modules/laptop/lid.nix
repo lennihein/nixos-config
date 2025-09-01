@@ -1,7 +1,9 @@
 { config, pkgs, ... }:
-{    
-    # ignore lid switch when on AC
-    services.logind.extraConfig = ''
-        HandleLidSwitchExternalPower=ignore
-    '';
+{
+  # Ignore lid switch when on AC power (new option path)
+  services.logind.settings = {
+    Login = {
+      HandleLidSwitchExternalPower = "ignore";
+    };
+  };
 }

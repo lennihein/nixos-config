@@ -3,6 +3,7 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    nixpkgs-stable.url = "github:NixOS/nixpkgs/nixos-25.05";
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -11,10 +12,18 @@
     # home-manager-config.url = "/home/lenni/home-manager";
   };
 
- outputs = { self, nixpkgs, home-manager, home-manager-config, ... }: {
+ outputs = { self, nixpkgs, nixpkgs-stable, home-manager, home-manager-config, ... }: {
     nixosConfigurations = {
       dell = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
+        # Provide extra module arguments for downstream modules
+        specialArgs = {
+          # Stable package set for modules expecting `pkgsStable`
+          pkgsStable = import nixpkgs-stable {
+            system = "x86_64-linux";
+            config = { allowUnfree = true; }; # keep in sync with nixpkgs config
+          };
+        };
         modules = [
           ./modules/common
           ./modules/laptop/default.nix
@@ -30,12 +39,25 @@
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
+            # Pass stable pkgs into home-manager modules
+            home-manager.extraSpecialArgs = {
+              pkgsStable = import nixpkgs-stable {
+                system = "x86_64-linux";
+                config = { allowUnfree = true; };
+              };
+            };
             home-manager.users.lenni = home-manager-config.nixosModules.default;
           }
         ];
       };
       ptah = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
+        specialArgs = {
+          pkgsStable = import nixpkgs-stable {
+            system = "x86_64-linux";
+            config = { allowUnfree = true; };
+          };
+        };
         modules = [
           ./modules/common
           ./modules/laptop/default.nix
@@ -52,6 +74,12 @@
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
+            home-manager.extraSpecialArgs = {
+              pkgsStable = import nixpkgs-stable {
+                system = "x86_64-linux";
+                config = { allowUnfree = true; };
+              };
+            };
             home-manager.users.lenni = home-manager-config.nixosModules.default;
           }
         ];
