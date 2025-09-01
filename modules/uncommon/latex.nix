@@ -9,6 +9,8 @@
       texlive.combined.scheme-full
       texstudio
       inkscape-with-extensions  # for svgs
+      pandoc
+      tectonic
     ];
   };
 }
