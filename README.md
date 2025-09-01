@@ -7,7 +7,13 @@ This repository contains flake-based NixOS configurations. Each host is declared
 From the repository root run:
 
 ```bash
-sudo nixos-rebuild switch --flake .#<hostname>
+sudo nixos-rebuild switch --flake .#<hostname> --no-write-lock-file
+```
+
+Remote usage (no local checkout):
+
+```bash
+sudo nixos-rebuild switch --flake github:lennihein/nixos-config#<hostname> --no-write-lock-file
 ```
 
 Replace `<hostname>` with one of the hosts defined in `flake.nix` (`dell` or `ptah`).
