@@ -33,6 +33,7 @@
           ./modules/uncommon/virtualisation.nix
           ./modules/uncommon/wireshark.nix
           ./modules/uncommon/tpm.nix
+          ./modules/uncommon/ssh.nix
           ./modules/uncommon/latex.nix
           ./hosts/dell/hardware-configuration.nix
           home-manager.nixosModules.home-manager
